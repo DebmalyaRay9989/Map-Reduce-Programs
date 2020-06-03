@@ -1,4 +1,6 @@
-package com.mapreduce.examples;
+package co.edureka;
+
+//package com.mapreduce.examples;
 
 import java.io.IOException;
 import java.util.*;
@@ -57,7 +59,8 @@ public class MaxOccuredWordMapReduce {
 		Configuration conf = new Configuration();
 
 		Job job = new Job(conf, "WordCount");
-
+		
+		job.setJarByClass(MaxOccuredWordMapReduce.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 
